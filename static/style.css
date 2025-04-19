@@ -1,0 +1,110 @@
+body {
+    font-family: sans-serif;
+    padding: 15px;
+    background-color: var(--tg-theme-bg-color, #ffffff); /* Используем переменные Telegram */
+    color: var(--tg-theme-text-color, #000000);
+}
+
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.criteria {
+    display:flex;
+}
+
+
+
+.form-group, fieldset {
+    margin-bottom: 15px;
+    border: none; /* для fieldset */
+    padding: 0; /* для fieldset */
+}
+
+label, legend {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="url"],
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid var(--tg-theme-hint-color, #dbdbdb);
+    border-radius: 4px;
+    background-color: var(--tg-theme-bg-color, #ffffff);
+    color: var(--tg-theme-text-color, #000000);
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: var(--tg-theme-button-color, #007bff);
+    color: var(--tg-theme-button-text-color, #ffffff);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.results-container {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid var(--tg-theme-hint-color, #dbdbdb);
+    border-radius: 4px;
+    background-color: var(--tg-theme-secondary-bg-color, #f8f9fa);
+}
+
+.results-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.results-container li {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-bottom: 1px dashed var(--tg-theme-hint-color, #eee);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.results-container li:last-child {
+    border-bottom: none;
+}
+
+.reroll-button {
+     padding: 3px 8px;
+     font-size: 12px;
+     cursor: pointer;
+     background-color: var(--tg-theme-hint-color, #ccc);
+     color: var(--tg-theme-text-color, #000);
+     border: none;
+     border-radius: 3px;
+     margin-left: 10px;
+}
+
+.error {
+    color: var(--tg-theme-destructive-text-color, red);
+    margin-top: 10px;
+}
+
+#loading {
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+    color: var(--tg-theme-hint-color, #888);
+}

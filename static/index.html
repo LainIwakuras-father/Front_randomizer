@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>VK Рандомайзер</title>
+        <link rel="stylesheet" href="static/style.css">
+        <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>VK Рандомайзер</h1> 
+            <div class="form-group">
+                <label for="post_url">Ссылка на пост:</label>
+                <input type="url" id="post_url" placeholder="https://vk.com/wall-XXXXX_YYYYY" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contest_name">Наименование розыгрыша (опционально):</label>
+                <input type="text" id="contest_name" placeholder="Розыгрыш призов...">
+            </div>
+
+            <fieldset class="form-group">
+                <legend>Учитывать:</legend>
+                <div class="criteria">
+                    <label for="criteria_likes">Лайки</label>
+                    <input type="checkbox" id="criteria_likes" name="criteria" value="likes">
+                    
+                </div>
+                <div class="criteria">
+                    <label for="criteria_reposts">Репосты</label>
+                    <input type="checkbox" id="criteria_reposts" name="criteria" value="reposts">
+                    
+                </div>
+                <div class="criteria">
+                    <label for="criteria_comments">Комментарии</label>
+                    <input type="checkbox" id="criteria_comments" name="criteria" value="comments">
+                    
+                </div>
+            </fieldset>
+
+            <div class="form-group">
+                <label for="required_groups">Ссылки на группы для подписки (через запятую):</label>
+                <textarea id="required_groups" rows="3" placeholder="https://vk.com/group1, https://vk.com/club2"></textarea>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="check_own_group">
+                <label for="check_own_group">Проверять подписку на нашу группу?</label>
+            </div>
+
+
+            <div class="form-group" >
+                <label for="num_winners">Количество победителей:</label>
+                <input type="number" id="num_winners" value="1" min="1" required>
+            </div>
+
+            <button id="determine_button">Определить победителя</button>
+
+            <div id="results" class="results-container" style="display: none;">
+                <h2>Результаты:</h2>
+                <p id="total_participants"></p>
+                <ul id="winners_list"></ul>
+                <div id="error_message" class="error"></div>
+            </div>
+
+            <div id="loading" style="display: none;">Загрузка...</div>
+
+        </div>
+        <script src="static/script.js"></script>
+    </body>
+</html>
