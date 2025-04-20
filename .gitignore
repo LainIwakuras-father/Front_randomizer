@@ -138,6 +138,4 @@ dmypy.json
 
 /postgres_db/
 
-/nginx
-/project
-/microservice_practice
+
