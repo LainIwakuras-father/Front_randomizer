@@ -75,7 +75,9 @@ const tg = window.Telegram.WebApp;
         try {
              // !!! Укажи URL твоего РАЗВЕРНУТОГО FastAPI бэкенда !!!
             // const backendUrl = 'http://localhost:8000';  ЗАМЕНИТЬ НА РЕАЛЬНЫЙ URL ПОСЛЕ ДЕПЛОЯ!
-            const response = await fetch(`/get_winners`, {
+
+            // БЛЯТЬ ЗАПОМНИ ЧТО /api/ -> backend:8000 Для nginx в докере  именно со слешами
+            const response = await fetch(`/api/get_winners`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -117,7 +119,7 @@ const tg = window.Telegram.WebApp;
           try {
              // !!! Укажи URL твоего РАЗВЕРНУТОГО FastAPI бэкенда !!!
             //  const backendUrl = 'http://localhost:8000'; // ЗАМЕНИТЬ!
-             const response = await fetch(`/reroll_winner`, {
+             const response = await fetch(`/api/reroll_winner`, {
                  method: 'POST',
                  headers: {
                      'Content-Type': 'application/json',
